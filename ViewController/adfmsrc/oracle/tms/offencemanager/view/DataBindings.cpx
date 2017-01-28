@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.56.60" id="DataBindings" SeparateXMLFiles="false"
+             Package="oracle.tms.offencemanager.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/oracle/tms/pages/ownerInfo.jsff"
+          usageId="oracle_tms_offencemanager_view_ownerInfoPageDef"/>
+    <page path="/oracle/tms/pages/confirmDetails.jsff"
+          usageId="oracle_tms_offencemanager_view_confirmDetailsPageDef"/>
+    <page path="/oracle/tms/pages/home.jspx"
+          usageId="oracle_tms_offencemanager_view_homePageDef"/>
+    <page path="/oracle/tms/pages/addOffence.jsff"
+          usageId="oracle_tms_offencemanager_view_addOffencePageDef"/>
+    <page path="/oracle/tms/pages/searchVehicle.jsff"
+          usageId="oracle_tms_offencemanager_view_searchVehiclePageDef"/>
+    <page path="/oracle/tms/pages/vehicleInfo.jsff"
+          usageId="oracle_tms_offencemanager_view_vehicleInfoPageDef1"/>
+    <page path="/oracle/tms/pages/Test.jspx"
+          usageId="oracle_tms_offencemanager_view_TestPageDef"/>
+    <page path="/oracle/tms/pages/Test1.jspx"
+          usageId="oracle_tms_offencemanager_view_Test1PageDef"/>
+    <page path="/Home.jspx"
+          usageId="oracle_tms_offencemanager_view_HomePageDef"/>
+    <page path="/oracle/tms/pages/OffenceDetail.jsff"
+          usageId="oracle_tms_offencemanager_view_OffenceDetailPageDef"/>
+    <page path="/oracle/tms/pages/SearchVehicle.jsff"
+          usageId="oracle_tms_offencemanager_view_SearchVehiclePageDef"/>
+    <page path="/oracle/tms/pages/VehicleDetail.jsff"
+          usageId="oracle_tms_offencemanager_view_VehicleDetailPageDef"/>
+    <page path="/oracle/tms/pages/vehicleDetail.jsff"
+          usageId="oracle_tms_offencemanager_view_vehicleDetailPageDef"/>
+    <page path="/oracle/tms/pages/offenceDetail.jsff"
+          usageId="oracle_tms_offencemanager_view_offenceDetailPageDef"/>
+    <page path="/WEB-INF/oracle/tms/flow/risgisterOffence.xml#risgisterOffence@CreateInsert"
+          usageId="oracle_tms_offencemanager_view_risgisterOffence_risgisterOffence_CreateInsertPageDef"/>
+    <page path="/BrowseOffence.jsff"
+          usageId="oracle_tms_offencemanager_view_BrowseOffencePageDef"/>
+    <page path="/oracle/tms/pages/UpdateOffence.jsff"
+          usageId="oracle_tms_offencemanager_view_UpdateOffencePageDef"/>
+    <page path="/oracle/tms/pages/Browse.jspx"
+          usageId="oracle_tms_offencemanager_view_BrowsePageDef"/>
+    <page path="/oracle/adf/pages/BrowseOffence.jsff"
+          usageId="oracle_tms_offencemanager_view_BrowseOffencePageDef1"/>
+    <page path="/oracle/tms/pages/BrowseOffence.jsff"
+          usageId="oracle_tms_offencemanager_view_BrowseOffencePageDef2"/>
+    <page path="/oracle/tms/pages/HomePage.jspx"
+          usageId="oracle_tms_offencemanager_view_untitled1PageDef"/>
+    <page path="/oracle/tms/pages/Browse.jsff"
+          usageId="oracle_tms_offencemanager_view_BrowsePageDef1"/>
+    <page path="/oracle/tms/pages/IndexHome.jspx"
+          usageId="oracle_tms_offencemanager_view_IndexHomePageDef"/>
+    <page path="/oracle/tms/pages/PendingOffence.jspx"
+          usageId="oracle_tms_offencemanager_view_PendingOffencePageDef"/>
+    <page path="/oracle/tms/pages/testVehicle.jspx"
+          usageId="oracle_tms_offencemanager_view_testVehiclePageDef"/>
+    <page path="/oracle/tms/pages/TestBrowse.jspx"
+          usageId="oracle_tms_offencemanager_view_TestBrowsePageDef"/>
+    <page path="/WEB-INF/oracle/tms/flow/registerOffenceTF.xml#registerOffenceTF@CreateInsert"
+          usageId="oracle_tms_offencemanager_view_registerOffenceTF_registerOffenceTF_CreateInsertPageDef"/>
+    <page path="/oracle/tms/pages/Home.jspx"
+          usageId="oracle_tms_offencemanager_view_HomePageDef1"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_tms_offencemanager_view_ownerInfoPageDef"
+          path="oracle.tms.pages.ownerInfoPageDef"/>
+    <page id="oracle_tms_offencemanager_view_vehicleInfoPageDef"
+          path="oracle.tms.pages.vehicleInfoPageDef"/>
+    <page id="oracle_tms_offencemanager_view_confirmDetailsPageDef"
+          path="oracle.tms.pages.confirmDetailsPageDef"/>
+    <page id="oracle_tms_offencemanager_view_homePageDef"
+          path="oracle.tms.pages.homePageDef"/>
+    <page id="oracle_tms_offencemanager_view_searchVehiclePageDef"
+          path="oracle.tms.pages.searchVehiclePageDef"/>
+    <page id="oracle_tms_offencemanager_view_vehicleInfoPageDef1"
+          path="oracle.tms.pages.vehicleInfoPageDef1"/>
+    <page id="oracle_tms_offencemanager_view_addOffencePageDef"
+          path="oracle.tms.pages.addOffencePageDef"/>
+    <page id="oracle_tms_offencemanager_view_TestPageDef"
+          path="oracle.tms.pages.TestPageDef"/>
+    <page id="oracle_tms_offencemanager_view_Test1PageDef"
+          path="oracle.tms.pages.Test1PageDef"/>
+    <page id="oracle_tms_offencemanager_view_HomePageDef"
+          path="oracle.tms.offencemanager.view.pageDefs.HomePageDef"/>
+    <page id="oracle_tms_offencemanager_view_SearchVehiclePageDef"
+          path="oracle.tms.pages.SearchVehiclePageDef"/>
+    <page id="oracle_tms_offencemanager_view_VehicleDetailPageDef"
+          path="oracle.tms.offencemanager.view.pageDefs.VehicleDetailPageDef"/>
+    <page id="oracle_tms_offencemanager_view_OffenceDetailPageDef"
+          path="oracle.tms.pages.OffenceDetailPageDef"/>
+    <page id="oracle_tms_offencemanager_view_vehicleDetailPageDef"
+          path="oracle.tms.pages.vehicleDetailPageDef"/>
+    <page id="oracle_tms_offencemanager_view_offenceDetailPageDef"
+          path="oracle.tms.pages.offenceDetailPageDef"/>
+    <page id="oracle_tms_offencemanager_view_risgisterOffence_risgisterOffence_CreateInsertPageDef"
+          path="oracle.tms.flow.risgisterOffence_risgisterOffence_CreateInsertPageDef"/>
+    <page id="oracle_tms_offencemanager_view_BrowseOffencePageDef"
+          path="oracle.tms.offencemanager.view.pageDefs.BrowseOffencePageDef"/>
+    <page id="oracle_tms_offencemanager_view_UpdateOffencePageDef"
+          path="oracle.tms.offencemanager.view.pageDefs.UpdateOffencePageDef"/>
+    <page id="oracle_tms_offencemanager_view_BrowsePageDef"
+          path="oracle.adf.pages.BrowsePageDef"/>
+    <page id="oracle_tms_offencemanager_view_BrowseOffencePageDef1"
+          path="oracle.adf.pages.BrowseOffencePageDef"/>
+    <page id="oracle_tms_offencemanager_view_BrowseOffencePageDef2"
+          path="oracle.tms.pages.BrowseOffencePageDef"/>
+    <page id="oracle_tms_offencemanager_view_untitled1PageDef"
+          path="oracle.tms.pages.untitled1PageDef"/>
+    <page id="oracle_tms_offencemanager_view_BrowsePageDef1"
+          path="oracle.tms.pages.BrowsePageDef"/>
+    <page id="oracle_tms_offencemanager_view_IndexHomePageDef"
+          path="oracle.tms.pages.IndexHomePageDef"/>
+    <page id="oracle_tms_offencemanager_view_PendingOffencePageDef"
+          path="oracle.tms.pages.PendingOffencePageDef"/>
+    <page id="oracle_tms_offencemanager_view_testVehiclePageDef"
+          path="oracle.tms.pages.testVehiclePageDef"/>
+    <page id="oracle_tms_offencemanager_view_TestBrowsePageDef"
+          path="oracle.tms.pages.TestBrowsePageDef"/>
+    <page id="oracle_tms_offencemanager_view_registerOffenceTF_registerOffenceTF_CreateInsertPageDef"
+          path="oracle.tms.flow.registerOffenceTF_registerOffenceTF_CreateInsertPageDef"/>
+    <page id="oracle_tms_offencemanager_view_HomePageDef1"
+          path="oracle.tms.pages.HomePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="TrafficManagerAMDataControl"
+                     Package="oracle.tms.offencemanager.model.appmodule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="TrafficManagerAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="BrowseOffenceAMDataControl"
+                     Package="oracle.tms.offencemanager.model.appmodule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="BrowseOffenceAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

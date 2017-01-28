@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:panelFormLayout id="pfl1">
+          <af:inputText value="#{bindings.VehNo.inputValue}"
+                        label="#{bindings.VehNo.hints.label}"
+                        required="#{bindings.VehNo.hints.mandatory}"
+                        columns="#{bindings.VehNo.hints.displayWidth}"
+                        maximumLength="#{bindings.VehNo.hints.precision}"
+                        shortDesc="#{bindings.VehNo.hints.tooltip}" id="it5">
+            <f:validator binding="#{bindings.VehNo.validator}"/>
+          </af:inputText>
+          <af:selectOneChoice value="#{bindings.VehType.inputValue}"
+                              label="#{bindings.VehType.label}"
+                              required="#{bindings.VehType.hints.mandatory}"
+                              shortDesc="#{bindings.VehType.hints.tooltip}"
+                              id="soc2" autoSubmit="true" >
+            <f:selectItems value="#{bindings.VehType.items}" id="si1"/>
+          </af:selectOneChoice>
+          <af:selectOneChoice value="#{bindings.VehCategory.inputValue}"
+                              label="#{bindings.VehCategory.label}"
+                              required="#{bindings.VehCategory.hints.mandatory}"
+                              shortDesc="#{bindings.VehCategory.hints.tooltip}"
+                              id="soc1" partialTriggers="soc2">
+            <f:selectItems value="#{bindings.VehCategory.items}" id="si2"/>
+          </af:selectOneChoice>
+          <af:inputText value="#{bindings.EngineNo.inputValue}"
+                        label="#{bindings.EngineNo.hints.label}"
+                        required="#{bindings.EngineNo.hints.mandatory}"
+                        columns="#{bindings.EngineNo.hints.displayWidth}"
+                        maximumLength="#{bindings.EngineNo.hints.precision}"
+                        shortDesc="#{bindings.EngineNo.hints.tooltip}" id="it7">
+            <f:validator binding="#{bindings.EngineNo.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.ModelN0.inputValue}"
+                        label="#{bindings.ModelN0.hints.label}"
+                        required="#{bindings.ModelN0.hints.mandatory}"
+                        columns="#{bindings.ModelN0.hints.displayWidth}"
+                        maximumLength="#{bindings.ModelN0.hints.precision}"
+                        shortDesc="#{bindings.ModelN0.hints.tooltip}" id="it10">
+            <f:validator binding="#{bindings.ModelN0.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.VehName.inputValue}"
+                        label="#{bindings.VehName.hints.label}"
+                        required="#{bindings.VehName.hints.mandatory}"
+                        columns="#{bindings.VehName.hints.displayWidth}"
+                        maximumLength="#{bindings.VehName.hints.precision}"
+                        shortDesc="#{bindings.VehName.hints.tooltip}" id="it3">
+            <f:validator binding="#{bindings.VehName.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.VehColor.inputValue}"
+                        label="#{bindings.VehColor.hints.label}"
+                        required="#{bindings.VehColor.hints.mandatory}"
+                        columns="#{bindings.VehColor.hints.displayWidth}"
+                        maximumLength="#{bindings.VehColor.hints.precision}"
+                        shortDesc="#{bindings.VehColor.hints.tooltip}" id="it8">
+            <f:validator binding="#{bindings.VehColor.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.ManufacturerName.inputValue}"
+                        label="#{bindings.ManufacturerName.hints.label}"
+                        required="#{bindings.ManufacturerName.hints.mandatory}"
+                        columns="#{bindings.ManufacturerName.hints.displayWidth}"
+                        maximumLength="#{bindings.ManufacturerName.hints.precision}"
+                        shortDesc="#{bindings.ManufacturerName.hints.tooltip}"
+                        id="it6">
+            <f:validator binding="#{bindings.ManufacturerName.validator}"/>
+          </af:inputText>
+          <af:inputDate value="#{bindings.DateOfManufacture.inputValue}"
+                        label="#{bindings.DateOfManufacture.hints.label}"
+                        required="#{bindings.DateOfManufacture.hints.mandatory}"
+                        shortDesc="#{bindings.DateOfManufacture.hints.tooltip}"
+                        id="id1">
+            <f:validator binding="#{bindings.DateOfManufacture.validator}"/>
+            <af:convertDateTime pattern="#{bindings.DateOfManufacture.format}"/>
+          </af:inputDate>
+          <af:inputText value="#{bindings.NoOfCylinders.inputValue}"
+                        label="#{bindings.NoOfCylinders.hints.label}"
+                        required="#{bindings.NoOfCylinders.hints.mandatory}"
+                        columns="#{bindings.NoOfCylinders.hints.displayWidth}"
+                        maximumLength="#{bindings.NoOfCylinders.hints.precision}"
+                        shortDesc="#{bindings.NoOfCylinders.hints.tooltip}"
+                        id="it9">
+            <f:validator binding="#{bindings.NoOfCylinders.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.NoOfCylinders.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.CubicCapacity.inputValue}"
+                        label="#{bindings.CubicCapacity.hints.label}"
+                        required="#{bindings.CubicCapacity.hints.mandatory}"
+                        columns="#{bindings.CubicCapacity.hints.displayWidth}"
+                        maximumLength="#{bindings.CubicCapacity.hints.precision}"
+                        shortDesc="#{bindings.CubicCapacity.hints.tooltip}"
+                        id="it4">
+            <f:validator binding="#{bindings.CubicCapacity.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.CubicCapacity.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.FuelUsed.inputValue}"
+                        label="#{bindings.FuelUsed.hints.label}"
+                        required="#{bindings.FuelUsed.hints.mandatory}"
+                        columns="#{bindings.FuelUsed.hints.displayWidth}"
+                        maximumLength="#{bindings.FuelUsed.hints.precision}"
+                        shortDesc="#{bindings.FuelUsed.hints.tooltip}" id="it1">
+            <f:validator binding="#{bindings.FuelUsed.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.OwnerId.inputValue}"
+                        label="#{bindings.OwnerId.hints.label}"
+                        required="#{bindings.OwnerId.hints.mandatory}"
+                        columns="#{bindings.OwnerId.hints.displayWidth}"
+                        maximumLength="#{bindings.OwnerId.hints.precision}"
+                        shortDesc="#{bindings.OwnerId.hints.tooltip}" id="it2">
+            <f:validator binding="#{bindings.OwnerId.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.OwnerId.format}"/>
+          </af:inputText>
+          <f:facet name="footer">
+            <af:commandButton text="Submit" id="cb1"/>
+          </f:facet>
+        </af:panelFormLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

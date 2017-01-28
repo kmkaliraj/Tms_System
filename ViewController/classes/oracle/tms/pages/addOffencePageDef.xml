@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="addOffencePageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmOffenceDetails3" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="TmOffenceDetails3Iterator"/>
+    <invokeAction Binds="CreateInsert" id="invokeCreateInsert"
+                  Refresh="renderModel"/>
+  </executables>
+  <bindings>
+    <action IterBinding="TmOffenceDetails3Iterator" id="CreateInsert"
+            InstanceName="TrafficManagerAMDataControl.TmOffenceDetails3"
+            DataControl="TrafficManagerAMDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <attributeValues IterBinding="TmOffenceDetails3Iterator" id="VehNo">
+      <AttrNames>
+        <Item Value="VehNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails3Iterator" id="Image">
+      <AttrNames>
+        <Item Value="Image"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails3Iterator"
+                     id="OffenceDetailId">
+      <AttrNames>
+        <Item Value="OffenceDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails3Iterator" id="OffenceStatus">
+      <AttrNames>
+        <Item Value="OffenceStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TmOffenceDetails3Iterator" StaticList="false"
+          Uses="LOV_OffenceId" id="OffenceId" DTSupportsMRU="false"/>
+    <attributeValues IterBinding="TmOffenceDetails3Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails3Iterator" id="Place">
+      <AttrNames>
+        <Item Value="Place"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails3Iterator" id="ReportedBy">
+      <AttrNames>
+        <Item Value="ReportedBy"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

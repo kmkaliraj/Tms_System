@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelAccordion id="pa1">
+    <af:showDetailItem text="Update Offence Status" id="sdi1">
+      <af:toolbar id="t1">
+        <af:commandButton text="Back" id="cb1" action="back"
+                          actionListener="#{pageFlowScope.AddOffenceBean.rollback}"/>
+        <af:commandButton text="Update" id="cb3"
+                          action="done"
+                          actionListener="#{pageFlowScope.AddOffenceBean.commit}"/>
+        <af:commandButton actionListener="#{bindings.onDeleteOffence.execute}"
+                          text="Delete"
+                          disabled="#{!bindings.onDeleteOffence.enabled}"
+                          id="cb2" action="done"/>
+      </af:toolbar>
+      <af:panelFormLayout id="pfl1" inlineStyle="height:262px;">
+        <af:inputText value="#{bindings.VehNo.inputValue}"
+                      label="#{bindings.VehNo.hints.label}"
+                      required="#{bindings.VehNo.hints.mandatory}"
+                      columns="#{bindings.VehNo.hints.displayWidth}"
+                      maximumLength="#{bindings.VehNo.hints.precision}"
+                      shortDesc="#{bindings.VehNo.hints.tooltip}" id="it2"
+                      readOnly="true">
+          <f:validator binding="#{bindings.VehNo.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.VehType.inputValue}"
+                      label="#{bindings.VehType.hints.label}"
+                      required="#{bindings.VehType.hints.mandatory}"
+                      columns="#{bindings.VehType.hints.displayWidth}"
+                      maximumLength="#{bindings.VehType.hints.precision}"
+                      shortDesc="#{bindings.VehType.hints.tooltip}" id="it5"
+                      readOnly="true">
+          <f:validator binding="#{bindings.VehType.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.OffenceType.inputValue}"
+                      label="#{bindings.OffenceType.hints.label}"
+                      required="#{bindings.OffenceType.hints.mandatory}"
+                      columns="#{bindings.OffenceType.hints.displayWidth}"
+                      maximumLength="#{bindings.OffenceType.hints.precision}"
+                      shortDesc="#{bindings.OffenceType.hints.tooltip}"
+                      id="it3" readOnly="true">
+          <f:validator binding="#{bindings.OffenceType.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.OffenceStatus.inputValue}"
+                      label="#{bindings.OffenceStatus.hints.label}"
+                      required="#{bindings.OffenceStatus.hints.mandatory}"
+                      columns="#{bindings.OffenceStatus.hints.displayWidth}"
+                      maximumLength="#{bindings.OffenceStatus.hints.precision}"
+                      shortDesc="#{bindings.OffenceStatus.hints.tooltip}"
+                      id="it7">
+          <f:validator binding="#{bindings.OffenceStatus.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Place.inputValue}"
+                      label="#{bindings.Place.hints.label}"
+                      required="#{bindings.Place.hints.mandatory}"
+                      columns="#{bindings.Place.hints.displayWidth}"
+                      maximumLength="#{bindings.Place.hints.precision}"
+                      shortDesc="#{bindings.Place.hints.tooltip}" id="it4">
+          <f:validator binding="#{bindings.Place.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.ReportedBy.inputValue}"
+                      label="#{bindings.ReportedBy.hints.label}"
+                      required="#{bindings.ReportedBy.hints.mandatory}"
+                      columns="#{bindings.ReportedBy.hints.displayWidth}"
+                      maximumLength="#{bindings.ReportedBy.hints.precision}"
+                      shortDesc="#{bindings.ReportedBy.hints.tooltip}" id="it1">
+          <f:validator binding="#{bindings.ReportedBy.validator}"/>
+        </af:inputText>
+        <af:inputDate value="#{bindings.Time.inputValue}"
+                      label="#{bindings.Time.hints.label}"
+                      required="#{bindings.Time.hints.mandatory}"
+                      shortDesc="#{bindings.Time.hints.tooltip}" id="id1">
+          <f:validator binding="#{bindings.Time.validator}"/>
+          <af:convertDateTime pattern="#{bindings.Time.format}"/>
+        </af:inputDate>
+        <af:inputText value="#{bindings.Penalty.inputValue}"
+                      label="#{bindings.Penalty.hints.label}"
+                      required="#{bindings.Penalty.hints.mandatory}"
+                      columns="#{bindings.Penalty.hints.displayWidth}"
+                      maximumLength="#{bindings.Penalty.hints.precision}"
+                      shortDesc="#{bindings.Penalty.hints.tooltip}" id="it6">
+          <f:validator binding="#{bindings.Penalty.validator}"/>
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.Penalty.format}"/>
+        </af:inputText>
+      </af:panelFormLayout>
+    </af:showDetailItem>
+  </af:panelAccordion>
+</jsp:root>

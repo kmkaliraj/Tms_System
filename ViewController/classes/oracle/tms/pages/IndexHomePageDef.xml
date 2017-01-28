@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="IndexHomePageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="registerVehicleTF1"
+              taskFlowId="/WEB-INF/oracle/tms/flow/registerVehicleTF.xml#registerVehicleTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="risgisterOffence1"
+              taskFlowId="/WEB-INF/oracle/tms/flow/risgisterOffence.xml#risgisterOffence"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="ManageOffenceTF1"
+              taskFlowId="/WEB-INF/oracle/tms/flow/ManageOffenceTF.xml#ManageOffenceTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="BrowseTF1"
+              taskFlowId="/WEB-INF/oracle/tms/flow/BrowseTF.xml#BrowseTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

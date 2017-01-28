@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:pageTemplate viewId="/WEB-INF/oracle/tms/templates/trainTemplate.jspx"
+                   id="pt1">
+    <f:facet name="body">
+      <af:panelAccordion id="pa1">
+        <af:showDetailItem text="Registration Home" id="sdi1">
+          <af:trainButtonBar value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}"
+                             id="tbb1"/>
+          <af:outputText value="Click next to proceed with the registration" id="ot1"
+                         inlineStyle="font-family:Arial, Helvetica, sans-serif; font-weight:bold;"/>
+        </af:showDetailItem>
+      </af:panelAccordion>
+    </f:facet>
+  </af:pageTemplate>
+</jsp:root>

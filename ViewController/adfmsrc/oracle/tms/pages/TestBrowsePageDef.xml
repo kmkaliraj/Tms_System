@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="TestBrowsePageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmOwnerdetails1" RangeSize="25"
+              DataControl="BrowseOffenceAMDataControl"
+              id="TmOwnerdetails1Iterator" ChangeEventPolicy="ppr"/>
+    <iterator Binds="TmVehicledetails1" RangeSize="25"
+              DataControl="BrowseOffenceAMDataControl"
+              id="TmVehicledetails1Iterator" ChangeEventPolicy="ppr"/>
+    <iterator Binds="TmOffenceDetails1" RangeSize="25"
+              DataControl="BrowseOffenceAMDataControl"
+              id="TmOffenceDetails1Iterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <action IterBinding="TmOwnerdetails1Iterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TmOwnerdetails1Iterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TmOwnerdetails1Iterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TmOwnerdetails1Iterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="OwnerId">
+      <AttrNames>
+        <Item Value="OwnerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Fname">
+      <AttrNames>
+        <Item Value="Fname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Lname">
+      <AttrNames>
+        <Item Value="Lname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Dateofbirth">
+      <AttrNames>
+        <Item Value="Dateofbirth"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="LandlineNo">
+      <AttrNames>
+        <Item Value="LandlineNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="MobileNo">
+      <AttrNames>
+        <Item Value="MobileNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Gender">
+      <AttrNames>
+        <Item Value="Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="TempAddr">
+      <AttrNames>
+        <Item Value="TempAddr"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="PermAddr">
+      <AttrNames>
+        <Item Value="PermAddr"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Pincode">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Occupation">
+      <AttrNames>
+        <Item Value="Occupation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="PancardNo">
+      <AttrNames>
+        <Item Value="PancardNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="AddProofName">
+      <AttrNames>
+        <Item Value="AddProofName"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TmVehicledetails1Iterator" id="First1"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TmVehicledetails1Iterator" id="Previous1"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TmVehicledetails1Iterator" id="Next1"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TmVehicledetails1Iterator" id="Last1"
+            RequiresUpdateModel="true" Action="last"/>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehNo">
+      <AttrNames>
+        <Item Value="VehNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehType">
+      <AttrNames>
+        <Item Value="VehType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehCategory">
+      <AttrNames>
+        <Item Value="VehCategory"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="EngineNo">
+      <AttrNames>
+        <Item Value="EngineNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="ModelN0">
+      <AttrNames>
+        <Item Value="ModelN0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehName">
+      <AttrNames>
+        <Item Value="VehName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehColor">
+      <AttrNames>
+        <Item Value="VehColor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator"
+                     id="ManufacturerName">
+      <AttrNames>
+        <Item Value="ManufacturerName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator"
+                     id="DateOfManufacture">
+      <AttrNames>
+        <Item Value="DateOfManufacture"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="NoOfCylinders">
+      <AttrNames>
+        <Item Value="NoOfCylinders"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="CubicCapacity">
+      <AttrNames>
+        <Item Value="CubicCapacity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="FuelUsed">
+      <AttrNames>
+        <Item Value="FuelUsed"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="OwnerId1">
+      <AttrNames>
+        <Item Value="OwnerId"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="TmOffenceDetails1Iterator" id="TmOffenceDetails1">
+      <nodeDefinition DefName="oracle.tms.offencemanager.model.uiview.TmOffenceDetailsVO"
+                      Name="TmOffenceDetails10">
+        <AttrNames>
+          <Item Value="VehNo"/>
+          <Item Value="Image"/>
+          <Item Value="OffenceDetailId"/>
+          <Item Value="OffenceStatus"/>
+          <Item Value="OffenceId"/>
+          <Item Value="Time"/>
+          <Item Value="Place"/>
+          <Item Value="ReportedBy"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="calculateTotal" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="calculateTotal"
+                  IsViewObjectMethod="false"
+                  DataControl="BrowseOffenceAMDataControl"
+                  InstanceName="BrowseOffenceAMDataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

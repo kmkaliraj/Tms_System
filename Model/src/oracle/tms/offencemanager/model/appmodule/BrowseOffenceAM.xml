@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="BrowseOffenceAM"
+  Version="11.1.1.56.60"
+  ClearCacheOnRollback="true"
+  ComponentClass="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAMImpl"
+  DefClass="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAMDefImpl"
+  ComponentInterface="oracle.tms.offencemanager.model.appmodule.common.BrowseOffenceAM"
+  ClientProxyName="oracle.tms.offencemanager.model.appmodule.client.BrowseOffenceAMClient">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+    <Attr Name="_isDefCodegen" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="TmOwnerdetails1"
+    ViewObjectName="oracle.tms.offencemanager.model.uiview.TmOwnerdetailsVO"/>
+  <ViewUsage
+    Name="TmVehicledetails1"
+    ViewObjectName="oracle.tms.offencemanager.model.uiview.TmVehicledetailsVO"/>
+  <ViewUsage
+    Name="TmOffenceDetails1"
+    ViewObjectName="oracle.tms.offencemanager.model.uiview.TmOffenceDetailsVO"/>
+  <ViewUsage
+    Name="TmOffence1"
+    ViewObjectName="oracle.tms.offencemanager.model.uiview.TmOffenceVO"/>
+  <ViewUsage
+    Name="QueryOffence1"
+    ViewObjectName="oracle.tms.offencemanager.model.uiview.QueryOffence"/>
+  <ViewLinkUsage
+    Name="TmOwnerDetTmVehDetLink1"
+    Version="11.1.1.56.60"
+    ViewLinkObjectName="oracle.tms.offencemanager.model.link.TmOwnerDetTmVehDetLink"
+    SrcViewUsageName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM.TmOwnerdetails1"
+    DstViewUsageName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM.TmVehicledetails1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="TmVehDetTmOffenceDetLink1"
+    Version="11.1.1.56.60"
+    ViewLinkObjectName="oracle.tms.offencemanager.model.link.TmVehDetTmOffenceDetLink"
+    SrcViewUsageName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM.TmVehicledetails1"
+    DstViewUsageName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM.TmOffenceDetails1"
+    Reversed="false"/>
+  <ClientInterface>
+    <Method
+      Name="getOffenceDetails">
+      <Return
+        Type="void"/>
+      <Parameter
+        Name="key"
+        Type="oracle.jbo.domain.Number"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

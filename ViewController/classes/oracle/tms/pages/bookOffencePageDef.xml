@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="bookOffencePageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmOffenceDetails4" RangeSize="25"
+              DataControl="OffenceManagerAMDataControl"
+              id="TmOffenceDetails4Iterator"/>
+    <invokeAction id="inovkeCreateInsert" Binds="CreateInsert"
+                  Refresh="renderModel"/>
+    <iterator Binds="TmVehicledetails1" RangeSize="25"
+              DataControl="OffenceManagerAMDataControl"
+              id="TmVehicledetails1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TmOffenceDetails4Iterator" id="VehNo">
+      <AttrNames>
+        <Item Value="VehNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails4Iterator" id="Image">
+      <AttrNames>
+        <Item Value="Image"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails4Iterator"
+                     id="OffenceDetailId">
+      <AttrNames>
+        <Item Value="OffenceDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails4Iterator" id="OffenceStatus">
+      <AttrNames>
+        <Item Value="OffenceStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TmOffenceDetails4Iterator" StaticList="false"
+          Uses="LOV_OffenceId" id="OffenceId" DTSupportsMRU="false"/>
+    <attributeValues IterBinding="TmOffenceDetails4Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails4Iterator" id="Place">
+      <AttrNames>
+        <Item Value="Place"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails4Iterator" id="ReportedBy">
+      <AttrNames>
+        <Item Value="ReportedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TmOffenceDetails4Iterator" id="CreateInsert"
+            InstanceName="OffenceManagerAMDataControl.TmOffenceDetails4"
+            DataControl="OffenceManagerAMDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehNo1">
+      <AttrNames>
+        <Item Value="VehNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehType">
+      <AttrNames>
+        <Item Value="VehType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="EngineNo">
+      <AttrNames>
+        <Item Value="EngineNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="ModelN0">
+      <AttrNames>
+        <Item Value="ModelN0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehName">
+      <AttrNames>
+        <Item Value="VehName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="VehColor">
+      <AttrNames>
+        <Item Value="VehColor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator"
+                     id="ManufacturerName">
+      <AttrNames>
+        <Item Value="ManufacturerName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator"
+                     id="DateOfManufacture">
+      <AttrNames>
+        <Item Value="DateOfManufacture"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="NoOfCylinders">
+      <AttrNames>
+        <Item Value="NoOfCylinders"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="CubicCapacity">
+      <AttrNames>
+        <Item Value="CubicCapacity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="FuelUsed">
+      <AttrNames>
+        <Item Value="FuelUsed"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmVehicledetails1Iterator" id="OwnerId">
+      <AttrNames>
+        <Item Value="OwnerId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

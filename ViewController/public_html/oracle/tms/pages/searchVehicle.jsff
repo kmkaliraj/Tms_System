@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout layout="vertical" id="pgl1">
+    <af:panelHeader text="Search for Vehicle" id="ph1"
+                    inlineStyle="width:1270px; height:154px;">
+      <af:query id="qryId1" headerText="Search" disclosed="true"
+                value="#{bindings.TmVehicledetailsVOCriteriaQuery.queryDescriptor}"
+                model="#{bindings.TmVehicledetailsVOCriteriaQuery.queryModel}"
+                queryListener="#{bindings.TmVehicledetailsVOCriteriaQuery.processQuery}"
+                queryOperationListener="#{bindings.TmVehicledetailsVOCriteriaQuery.processQueryOperation}"
+                resultComponentId="::resId1"/>
+    </af:panelHeader>
+    <af:table value="#{bindings.TmVehicledetails1.collectionModel}" var="row"
+              rows="#{bindings.TmVehicledetails1.rangeSize}"
+              emptyText="#{bindings.TmVehicledetails1.viewable ? 'No data to display.' : 'Access Denied.'}"
+              fetchSize="#{bindings.TmVehicledetails1.rangeSize}"
+              rowBandingInterval="0"
+              selectedRowKeys="#{bindings.TmVehicledetails1.collectionModel.selectedRow}"
+              selectionListener="#{bindings.TmVehicledetails1.collectionModel.makeCurrent}"
+              rowSelection="single" id="resId1" inlineStyle="height:486px;"
+              width="1263">
+      <af:column sortProperty="VehNo" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.VehNo.label}"
+                 id="resId1c1">
+        <af:commandLink actionListener="#{bindings.setCurrentRowWithKeyValue.execute}"
+                        text="#{row.VehNo}"
+                        disabled="#{!bindings.setCurrentRowWithKeyValue.enabled}"
+                        id="cl1" partialTriggers="::resId1"
+                        action="getDetails"/>
+      </af:column>
+      <af:column sortProperty="VehType" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.VehType.label}"
+                 id="resId1c2">
+        <af:outputText value="#{row.VehType}" id="ot8"/>
+      </af:column>
+      <af:column sortProperty="EngineNo" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.EngineNo.label}"
+                 id="resId1c3">
+        <af:outputText value="#{row.EngineNo}" id="ot1"/>
+      </af:column>
+      <af:column sortProperty="ModelN0" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.ModelN0.label}"
+                 id="resId1c4">
+        <af:outputText value="#{row.ModelN0}" id="ot6"/>
+      </af:column>
+      <af:column sortProperty="VehName" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.VehName.label}"
+                 id="resId1c5">
+        <af:outputText value="#{row.VehName}" id="ot12"/>
+      </af:column>
+      <af:column sortProperty="VehColor" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.VehColor.label}"
+                 id="resId1c6">
+        <af:outputText value="#{row.VehColor}" id="ot3"/>
+      </af:column>
+      <af:column sortProperty="ManufacturerName" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.ManufacturerName.label}"
+                 id="resId1c7">
+        <af:outputText value="#{row.ManufacturerName}" id="ot9"/>
+      </af:column>
+      <af:column sortProperty="DateOfManufacture" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.DateOfManufacture.label}"
+                 id="resId1c8">
+        <af:outputText value="#{row.DateOfManufacture}" id="ot2">
+          <af:convertDateTime pattern="#{bindings.TmVehicledetails1.hints.DateOfManufacture.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="NoOfCylinders" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.NoOfCylinders.label}"
+                 id="resId1c9">
+        <af:outputText value="#{row.NoOfCylinders}" id="ot7">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.TmVehicledetails1.hints.NoOfCylinders.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="CubicCapacity" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.CubicCapacity.label}"
+                 id="resId1c10">
+        <af:outputText value="#{row.CubicCapacity}" id="ot5">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.TmVehicledetails1.hints.CubicCapacity.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="FuelUsed" sortable="false"
+                 headerText="#{bindings.TmVehicledetails1.hints.FuelUsed.label}"
+                 id="resId1c11">
+        <af:outputText value="#{row.FuelUsed}" id="ot10"/>
+      </af:column>
+    </af:table>
+  </af:panelGroupLayout>
+</jsp:root>

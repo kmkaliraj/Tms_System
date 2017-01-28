@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelAccordion id="pa1">
+    <af:showDetailItem text="Vehicle Details" id="sdi1">
+      <af:panelFormLayout id="pfl1" inlineStyle="height:194px;">
+        <af:panelLabelAndMessage label="#{bindings.VehNo.hints.label}"
+                                 id="plam11">
+          <af:outputText value="#{bindings.VehNo.inputValue}" id="ot5"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.VehType.hints.label}"
+                                 id="plam9">
+          <af:outputText value="#{bindings.VehType.inputValue}" id="ot10"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.EngineNo.hints.label}"
+                                 id="plam8">
+          <af:outputText value="#{bindings.EngineNo.inputValue}" id="ot9"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.ModelN0.hints.label}"
+                                 id="plam3">
+          <af:outputText value="#{bindings.ModelN0.inputValue}" id="ot6"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.VehName.hints.label}"
+                                 id="plam6">
+          <af:outputText value="#{bindings.VehName.inputValue}" id="ot12"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.VehColor.hints.label}"
+                                 id="plam10">
+          <af:outputText value="#{bindings.VehColor.inputValue}" id="ot2"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.ManufacturerName.hints.label}"
+                                 id="plam12">
+          <af:outputText value="#{bindings.ManufacturerName.inputValue}"
+                         id="ot4"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.DateOfManufacture.hints.label}"
+                                 id="plam2">
+          <af:outputText value="#{bindings.DateOfManufacture.inputValue}"
+                         id="ot1">
+            <af:convertDateTime pattern="#{bindings.DateOfManufacture.format}"/>
+          </af:outputText>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.NoOfCylinders.hints.label}"
+                                 id="plam4">
+          <af:outputText value="#{bindings.NoOfCylinders.inputValue}" id="ot8">
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.NoOfCylinders.format}"/>
+          </af:outputText>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.CubicCapacity.hints.label}"
+                                 id="plam1">
+          <af:outputText value="#{bindings.CubicCapacity.inputValue}" id="ot7">
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.CubicCapacity.format}"/>
+          </af:outputText>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.FuelUsed.hints.label}"
+                                 id="plam7">
+          <af:outputText value="#{bindings.FuelUsed.inputValue}" id="ot11"/>
+        </af:panelLabelAndMessage>
+      </af:panelFormLayout>
+      <af:toolbar id="t1">
+        <af:commandButton text="Back" id="cb1" action="back"/>
+        <af:commandButton text="Add Offence" id="cb2" action="addOffence"/>
+      </af:toolbar>
+    </af:showDetailItem>
+  </af:panelAccordion>
+</jsp:root>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmVehicledetailsEO"
+  Version="11.1.1.56.60"
+  DBObjectType="table"
+  DBObjectName="TM_VEHICLEDETAILS"
+  AliasName="TmVehicledetailsEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="oracle.tms.offencemanager.model.entity.TmVehicledetailsEOImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="VehNo"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="VEH_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehNo_LABEL"/>
+        <TOOLTIP
+          ResId="VEHICLE_NUMBER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="VehType"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="VEH_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehType_LABEL"/>
+        <TOOLTIP
+          ResId="VEHICLE_TYPE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="EngineNo"
+    Precision="20"
+    ColumnName="ENGINE_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModelN0"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="MODEL_N0"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.ModelN0_LABEL"/>
+        <TOOLTIP
+          ResId="MODEL_NAME"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="VehName"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="VEH_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehName_LABEL"/>
+        <TOOLTIP
+          ResId="VEHICLE_NAME"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="VehColor"
+    Precision="20"
+    ColumnName="VEH_COLOR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehColor_LABEL"/>
+        <TOOLTIP
+          ResId="VEHICLE_COLOR"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="ManufacturerName"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="MANUFACTURER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.ManufacturerName_LABEL"/>
+        <TOOLTIP
+          ResId="MANUFACTORER_NAME"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="DateOfManufacture"
+    IsNotNull="true"
+    ColumnName="DATE_OF_MANUFACTURE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.DateOfManufacture_LABEL"/>
+        <TOOLTIP
+          ResId="MANUFACTORED_DATE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="NoOfCylinders"
+    ColumnName="NO_OF_CYLINDERS"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.NoOfCylinders_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <validation:ListValidationBean
+      Name="NoOfCylinders_Rule_0"
+      ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.NoOfCylinders_Rule_1"
+      OnAttribute="NoOfCylinders"
+      OperandType="LITERAL"
+      Inverse="false">
+      <validation:AttrArray
+        Name="List">
+        <validation:Item
+          Value="1"/>
+        <validation:Item
+          Value="2"/>
+        <validation:Item
+          Value="3"/>
+        <validation:Item
+          Value="4"/>
+      </validation:AttrArray>
+    </validation:ListValidationBean>
+  </Attribute>
+  <Attribute
+    Name="CubicCapacity"
+    ColumnName="CUBIC_CAPACITY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.CubicCapacity_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <validation:RangeValidationBean
+      Name="CubicCapacity_Rule_0"
+      ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.CubicCapacity_Rule_0"
+      OnAttribute="CubicCapacity"
+      OperandType="LITERAL"
+      Inverse="false"
+      MinValue="10"
+      MaxValue="100"/>
+  </Attribute>
+  <Attribute
+    Name="FuelUsed"
+    Precision="20"
+    ColumnName="FUEL_USED"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.FuelUsed_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="OwnerId"
+    ColumnName="OWNER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.OwnerId_LABEL"/>
+        <TOOLTIP
+          ResId="OWNER_ID"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="VehCategory"
+    Precision="20"
+    ColumnName="VEH_CATEGORY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_VEHICLEDETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TmOwnerdetails"
+    Association="oracle.tms.offencemanager.model.assoc.TmOwnerDetTmVehDetAssoc"
+    AssociationEnd="oracle.tms.offencemanager.model.assoc.TmOwnerDetTmVehDetAssoc.TmOwnerdetails"
+    AssociationOtherEnd="oracle.tms.offencemanager.model.assoc.TmOwnerDetTmVehDetAssoc.TmVehicledetails"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TmOffenceDetailsEO"
+    Association="oracle.tms.offencemanager.model.assoc.TmVehDetTmOffenceDetAssoc"
+    AssociationEnd="oracle.tms.offencemanager.model.assoc.TmVehDetTmOffenceDetAssoc.TmOffenceDetailsEO"
+    AssociationOtherEnd="oracle.tms.offencemanager.model.assoc.TmVehDetTmOffenceDetAssoc.TmVehicledetailsEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="SysC004518">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004518"/>
+      <Attr Name="_checkCondition" Value='"VEH_NO" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehNo"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004519">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004519"/>
+      <Attr Name="_checkCondition" Value='"VEH_TYPE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehType"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004520">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004520"/>
+      <Attr Name="_checkCondition" Value='"MODEL_N0" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.ModelN0"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004521">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004521"/>
+      <Attr Name="_checkCondition" Value='"VEH_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004522">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004522"/>
+      <Attr Name="_checkCondition" Value='"MANUFACTURER_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.ManufacturerName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004523">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004523"/>
+      <Attr Name="_checkCondition" Value='"DATE_OF_MANUFACTURE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.DateOfManufacture"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TmVehicledetailsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TM_VEHICLEDETAILS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmVehicledetailsEO.VehNo"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.tms.offencemanager.model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>

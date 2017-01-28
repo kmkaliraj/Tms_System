@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="BrowseOffencePageDef"
+                Package="oracle.adf.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OffenceDetialsByVehicle1" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="OffenceDetialsByVehicle1Iterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="OffenceDetailId">
+      <AttrNames>
+        <Item Value="OffenceDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="OffenceId">
+      <AttrNames>
+        <Item Value="OffenceId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="OffenceStatus">
+      <AttrNames>
+        <Item Value="OffenceStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator" id="Place">
+      <AttrNames>
+        <Item Value="Place"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="ReportedBy">
+      <AttrNames>
+        <Item Value="ReportedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator" id="VehNo">
+      <AttrNames>
+        <Item Value="VehNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="OffenceId1">
+      <AttrNames>
+        <Item Value="OffenceId1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="OffenceType">
+      <AttrNames>
+        <Item Value="OffenceType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="Penalty">
+      <AttrNames>
+        <Item Value="Penalty"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetialsByVehicle1Iterator"
+                     id="VehType">
+      <AttrNames>
+        <Item Value="VehType"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="OffenceDetialsByVehicle1Iterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="OffenceDetialsByVehicle1Iterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="OffenceDetialsByVehicle1Iterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="OffenceDetialsByVehicle1Iterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>

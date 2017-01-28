@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="BrowseOffencePageDef"
+                Package="oracle.tms.offencemanager.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OffenceDetailJoined1" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="OffenceDetailJoined1Iterator"/>
+    <searchRegion Criteria="OffenceDetailJoinedVOCriteria"
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="OffenceDetailJoined1Iterator"
+                  id="OffenceDetailJoinedVOCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="OffenceDetailJoined1Iterator" id="OffenceDetailJoined1">
+      <nodeDefinition DefName="oracle.tms.offencemanager.model.uiview.OffenceDetailJoinedVO"
+                      Name="OffenceDetailJoined10">
+        <AttrNames>
+          <Item Value="OffenceDetailId"/>
+          <Item Value="VehNo"/>
+          <Item Value="VehType"/>
+          <Item Value="OffenceType"/>
+          <Item Value="OffenceStatus"/>
+          <Item Value="Place"/>
+          <Item Value="ReportedBy"/>
+          <Item Value="Time"/>
+          <Item Value="Penalty"/>
+          <Item Value="OffenceId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="OffenceDetailJoined1Iterator"
+            id="setCurrentRowWithKeyValue" RequiresUpdateModel="false"
+            Action="setCurrentRowWithKeyValue">
+      <NamedData NDName="rowKey" NDType="java.lang.String"
+                 NDValue="#{row.OffenceDetailId}"/>
+    </action>
+  </bindings>
+</pageDefinition>

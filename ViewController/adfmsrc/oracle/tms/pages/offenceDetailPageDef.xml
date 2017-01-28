@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="offenceDetailPageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmOffenceDetails2" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="TmOffenceDetails2Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TmOffenceDetails2Iterator" id="VehNo">
+      <AttrNames>
+        <Item Value="VehNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails2Iterator" id="Image">
+      <AttrNames>
+        <Item Value="Image"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails2Iterator" id="OffenceStatus">
+      <AttrNames>
+        <Item Value="OffenceStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TmOffenceDetails2Iterator" StaticList="false"
+          Uses="LOV_OffenceId" id="OffenceId" DTSupportsMRU="false"/>
+    <attributeValues IterBinding="TmOffenceDetails2Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails2Iterator" id="Place">
+      <AttrNames>
+        <Item Value="Place"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails2Iterator" id="ReportedBy">
+      <AttrNames>
+        <Item Value="ReportedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails2Iterator"
+                     id="OffenceDetailId">
+      <AttrNames>
+        <Item Value="OffenceDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="TrafficManagerAMDataControl"/>
+  </bindings>
+</pageDefinition>

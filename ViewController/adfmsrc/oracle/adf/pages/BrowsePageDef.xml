@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="BrowsePageDef"
+                Package="oracle.adf.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmVehicleOwner1" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="TmVehicleOwner1Iterator"/>
+    <iterator Binds="OffenceDetailJoined1" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="OffenceDetailJoined1Iterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TmVehicleOwner1Iterator" id="TmVehicleOwner1">
+      <nodeDefinition DefName="oracle.tms.offencemanager.model.uiview.TmVehicleOwnerVO"
+                      Name="TmVehicleOwner10">
+        <AttrNames>
+          <Item Value="VehNo"/>
+          <Item Value="OwnerId"/>
+          <Item Value="VehColor"/>
+          <Item Value="VehName"/>
+          <Item Value="VehType"/>
+          <Item Value="AddProofName"/>
+          <Item Value="Dateofbirth"/>
+          <Item Value="Fname"/>
+          <Item Value="Gender"/>
+          <Item Value="LandlineNo"/>
+          <Item Value="Lname"/>
+          <Item Value="MobileNo"/>
+          <Item Value="Occupation"/>
+          <Item Value="OwnerId1"/>
+          <Item Value="PancardNo"/>
+          <Item Value="PermAddr"/>
+          <Item Value="Pincode"/>
+          <Item Value="TempAddr"/>
+          <Item Value="CubicCapacity"/>
+          <Item Value="DateOfManufacture"/>
+          <Item Value="EngineNo"/>
+          <Item Value="ManufacturerName"/>
+          <Item Value="ModelN0"/>
+          <Item Value="FuelUsed"/>
+          <Item Value="NoOfCylinders"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="TmVehicleOwner1Iterator" id="VehNo">
+      <AttrNames>
+        <Item Value="VehNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator"
+                     id="OffenceDetailId">
+      <AttrNames>
+        <Item Value="OffenceDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator" id="VehType">
+      <AttrNames>
+        <Item Value="VehType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator"
+                     id="OffenceType">
+      <AttrNames>
+        <Item Value="OffenceType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator"
+                     id="OffenceStatus">
+      <AttrNames>
+        <Item Value="OffenceStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator" id="Place">
+      <AttrNames>
+        <Item Value="Place"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator" id="ReportedBy">
+      <AttrNames>
+        <Item Value="ReportedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator" id="Penalty">
+      <AttrNames>
+        <Item Value="Penalty"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OffenceDetailJoined1Iterator" id="OffenceId">
+      <AttrNames>
+        <Item Value="OffenceId"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="OffenceDetailJoined1Iterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="OffenceDetailJoined1Iterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="OffenceDetailJoined1Iterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="OffenceDetailJoined1Iterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>

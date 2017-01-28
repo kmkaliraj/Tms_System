@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<pageTemplateDefs xmlns="http://xmlns.oracle.com/adf/faces/rich/pagetemplate">
+  <pagetemplate-jsp-ui-def>/oracle/tms/pages/HomePageTemplate.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/oracle/tms/pages/HomePageTemplate.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/oracle/tms/pages/HomePageTemplate</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/oracle/tms/pages/HomePageTemplate.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/WEB-INF/oracle/tms/templates/Home.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/WEB-INF/oracle/tms/templates/trainTemplate.jspx</pagetemplate-jsp-ui-def>
+</pageTemplateDefs>

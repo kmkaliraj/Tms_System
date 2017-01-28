@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="Home">
+    <page>/oracle/tms/pages/Home.jspx</page>
+  </view>
+  <managed-bean id="__23">
+    <managed-bean-name id="__25">AddOffenceBean</managed-bean-name>
+    <managed-bean-class id="__24">oracle.adf.bean.AddOffenceBean</managed-bean-class>
+    <managed-bean-scope id="__26">pageFlow</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name id="__1">ManageOffenceBean</managed-bean-name>
+    <managed-bean-class id="__3">oracle.adf.bean.ManageOffenceBean</managed-bean-class>
+    <managed-bean-scope id="__2">backingBean</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name id="__5">OffenceSelectionBean</managed-bean-name>
+    <managed-bean-class id="__6">oracle.adf.bean.OffeneceSelectionBean</managed-bean-class>
+    <managed-bean-scope id="__8">request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name id="__9">BrowseBean</managed-bean-name>
+    <managed-bean-class id="__12">oracle.adf.bean.BrowseBean</managed-bean-class>
+    <managed-bean-scope id="__10">pageFlow</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__16">
+    <managed-bean-name id="__14">SearchOffenceStatusBean</managed-bean-name>
+    <managed-bean-class id="__15">oracle.adf.bean.SearchOffenceStatusBean</managed-bean-class>
+    <managed-bean-scope id="__13">request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

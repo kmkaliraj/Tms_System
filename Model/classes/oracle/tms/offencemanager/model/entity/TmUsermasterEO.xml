@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmUsermasterEO"
+  Version="11.1.1.56.60"
+  DBObjectType="table"
+  DBObjectName="TM_USERMASTER"
+  AliasName="TmUsermasterEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="Username"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="USERNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_USERMASTER"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Password"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="PASSWORD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_USERMASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Rolename"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="ROLENAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_USERMASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysC004445">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004445"/>
+      <Attr Name="_checkCondition" Value='"USERNAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmUsermasterEO.Username"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004446">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004446"/>
+      <Attr Name="_checkCondition" Value='"PASSWORD" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmUsermasterEO.Password"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004447">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004447"/>
+      <Attr Name="_checkCondition" Value='"ROLENAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmUsermasterEO.Rolename"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TmUsermasterPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TM_USERMASTER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmUsermasterEO.Username"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TmUsermasterTmRolemastFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="TM_ROLEMASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TM_USERMASTER_TM_ROLEMAST_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmUsermasterEO.Rolename"/>
+    </AttrArray>
+  </Key>
+</Entity>

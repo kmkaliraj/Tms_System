@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OffenceDetialsByVehicle"
+  Version="11.1.1.56.60"
+  SelectList="TmOffenceDetailsEO.IMAGE, 
+       TmOffenceDetailsEO.OFFENCE_DETAIL_ID, 
+       TmOffenceDetailsEO.OFFENCE_ID, 
+       TmOffenceDetailsEO.OFFENCE_STATUS, 
+       TmOffenceDetailsEO.PLACE, 
+       TmOffenceDetailsEO.REPORTED_BY, 
+       TmOffenceDetailsEO.TIME, 
+       TmOffenceDetailsEO.VEH_NO, 
+       TmOffenceEO.OFFENCE_ID AS OFFENCE_ID1, 
+       TmOffenceEO.OFFENCE_TYPE, 
+       TmOffenceEO.PENALTY, 
+       TmOffenceEO.VEH_TYPE"
+  FromList="TM_OFFENCE_DETAILS TmOffenceDetailsEO, TM_OFFENCE TmOffenceEO"
+  Where="TmOffenceDetailsEO.OFFENCE_ID = TmOffenceEO.OFFENCE_ID
+AND TmOffenceDetailsEO.VEH_NO = :p_veh_no"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <Variable
+    Name="p_veh_no"
+    Kind="where"
+    Type="java.lang.String"/>
+  <EntityUsage
+    Name="TmOffenceDetailsEO"
+    Entity="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO"/>
+  <EntityUsage
+    Name="TmOffenceEO"
+    Entity="oracle.tms.offencemanager.model.entity.TmOffenceEO"
+    Association="oracle.tms.offencemanager.model.entity.TmOffenceTmoffenceDetAssoc"
+    AssociationEnd="oracle.tms.offencemanager.model.entity.TmOffenceTmoffenceDetAssoc.TmOffence"
+    SourceUsage="oracle.tms.offencemanager.model.uiview.OffenceDetialsByVehicle.TmOffenceDetailsEO"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_srcAttributes">
+        <Item
+          Value="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.OffenceId"/>
+      </AttrArray>
+      <AttrArray Name="_dstAttributes">
+        <Item
+          Value="oracle.tms.offencemanager.model.entity.TmOffenceEO.OffenceId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="Image"
+    IsQueriable="false"
+    PrecisionRule="true"
+    EntityAttrName="Image"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="IMAGE"/>
+  <ViewAttribute
+    Name="OffenceDetailId"
+    IsUpdateable="while_insert"
+    PrecisionRule="true"
+    EntityAttrName="OffenceDetailId"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="OFFENCE_DETAIL_ID"/>
+  <ViewAttribute
+    Name="OffenceId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="OffenceId"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="OFFENCE_ID"/>
+  <ViewAttribute
+    Name="OffenceStatus"
+    PrecisionRule="true"
+    EntityAttrName="OffenceStatus"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="OFFENCE_STATUS"/>
+  <ViewAttribute
+    Name="Place"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Place"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="PLACE"/>
+  <ViewAttribute
+    Name="ReportedBy"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ReportedBy"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="REPORTED_BY"/>
+  <ViewAttribute
+    Name="Time"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Time"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="TIME"/>
+  <ViewAttribute
+    Name="VehNo"
+    PrecisionRule="true"
+    EntityAttrName="VehNo"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="VEH_NO"/>
+  <ViewAttribute
+    Name="OffenceId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="OffenceId"
+    EntityUsage="TmOffenceEO"
+    AliasName="OFFENCE_ID1"/>
+  <ViewAttribute
+    Name="OffenceType"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="OffenceType"
+    EntityUsage="TmOffenceEO"
+    AliasName="OFFENCE_TYPE"/>
+  <ViewAttribute
+    Name="Penalty"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Penalty"
+    EntityUsage="TmOffenceEO"
+    AliasName="PENALTY"/>
+  <ViewAttribute
+    Name="VehType"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="VehType"
+    EntityUsage="TmOffenceEO"
+    AliasName="VEH_TYPE"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="OffenceDetailId"/>
+  </AttrArray>
+</ViewObject>

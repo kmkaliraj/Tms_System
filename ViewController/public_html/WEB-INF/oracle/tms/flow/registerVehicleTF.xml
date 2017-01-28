@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="registerVehicleTF">
+    <default-activity id="__1">registrationHome</default-activity>
+    <transaction id="__15">
+      <new-transaction/>
+    </transaction>
+    <view id="registrationHome">
+      <display-name id="__8">Registration Home</display-name>
+      <page>/oracle/tms/pages/registrationHome.jsff</page>
+      <train-stop id="__2"/>
+    </view>
+    <view id="ownerInfo">
+      <display-name id="__18">Owner Details</display-name>
+      <page>/oracle/tms/pages/ownerInfo.jsff</page>
+      <train-stop id="__3"/>
+    </view>
+    <view id="vehicleInfo">
+      <display-name id="__20">Vehicle Details</display-name>
+      <page>/oracle/tms/pages/vehicleInfo.jsff</page>
+      <train-stop id="__4"/>
+    </view>
+    <view id="confirmDetails">
+      <display-name id="__19">Review and Confirm</display-name>
+      <page>/oracle/tms/pages/confirmDetails.jsff</page>
+      <train-stop id="__5"/>
+    </view>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome id="__6">
+        <name>taskFlowReturn1</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="taskFlowReturn2">
+      <outcome id="__7">
+        <name>taskFlowReturn2</name>
+        <rollback/>
+      </outcome>
+    </task-flow-return>
+    <train/>
+    <control-flow-rule id="__9">
+      <from-activity-id id="__10">confirmDetails</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome id="__13">confirm</from-outcome>
+        <to-activity-id id="__11">taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__16">
+        <from-outcome id="__17">cancel</from-outcome>
+        <to-activity-id id="__14">taskFlowReturn2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <critical/>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="bookOffencePageDef1"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmOffenceDetails1" RangeSize="25"
+              DataControl="OffenceManagerAMDataControl"
+              id="TmOffenceDetails1Iterator"/>
+    <invokeAction id="invokeCreateInsert" Binds="CreateInsert"
+                  Refresh="renderModel"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TmOffenceDetails1Iterator" id="Image">
+      <AttrNames>
+        <Item Value="Image"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails1Iterator"
+                     id="OffenceDetailId">
+      <AttrNames>
+        <Item Value="OffenceDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails1Iterator" id="OffenceStatus">
+      <AttrNames>
+        <Item Value="OffenceStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TmOffenceDetails1Iterator" StaticList="false"
+          Uses="LOV_OffenceId" id="OffenceId" DTSupportsMRU="false"/>
+    <attributeValues IterBinding="TmOffenceDetails1Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails1Iterator" id="Place">
+      <AttrNames>
+        <Item Value="Place"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOffenceDetails1Iterator" id="ReportedBy">
+      <AttrNames>
+        <Item Value="ReportedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TmOffenceDetails1Iterator" id="CreateInsert"
+            InstanceName="OffenceManagerAMDataControl.TmOffenceDetails1"
+            DataControl="OffenceManagerAMDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="Test1PageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmOwnerdetails1" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="TmOwnerdetails1Iterator"/>
+    <invokeAction id="invokeCreateInsert" Binds="CreateInsert"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="OwnerId">
+      <AttrNames>
+        <Item Value="OwnerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Fname">
+      <AttrNames>
+        <Item Value="Fname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Lname">
+      <AttrNames>
+        <Item Value="Lname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Dateofbirth">
+      <AttrNames>
+        <Item Value="Dateofbirth"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="LandlineNo">
+      <AttrNames>
+        <Item Value="LandlineNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="MobileNo">
+      <AttrNames>
+        <Item Value="MobileNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Gender">
+      <AttrNames>
+        <Item Value="Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="TempAddr">
+      <AttrNames>
+        <Item Value="TempAddr"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="PermAddr">
+      <AttrNames>
+        <Item Value="PermAddr"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Pincode">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="Occupation">
+      <AttrNames>
+        <Item Value="Occupation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="PancardNo">
+      <AttrNames>
+        <Item Value="PancardNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmOwnerdetails1Iterator" id="AddProofName">
+      <AttrNames>
+        <Item Value="AddProofName"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TmOwnerdetails1Iterator" id="CreateInsert"
+            InstanceName="TrafficManagerAMDataControl.TmOwnerdetails1"
+            DataControl="TrafficManagerAMDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

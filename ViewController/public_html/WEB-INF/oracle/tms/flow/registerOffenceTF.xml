@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="registerOffenceTF">
+    <default-activity id="__1">searchVehicle</default-activity>
+    <transaction id="__2">
+      <new-transaction/>
+    </transaction>
+    <view id="searchVehicle">
+      <page>/oracle/tms/pages/searchVehicle.jsff</page>
+    </view>
+    <view id="vehicleDetail">
+      <page>/oracle/tms/pages/vehicleDetail.jsff</page>
+    </view>
+    <method-call id="CreateInsert">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome id="__22">
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="offenceDetail">
+      <page>/oracle/tms/pages/offenceDetail.jsff</page>
+    </view>
+    <control-flow-rule id="__12">
+      <from-activity-id id="__13">searchVehicle</from-activity-id>
+      <control-flow-case id="__14">
+        <from-outcome id="__16">getDetails</from-outcome>
+        <to-activity-id id="__15">vehicleDetail</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__17">
+      <from-activity-id id="__18">vehicleDetail</from-activity-id>
+      <control-flow-case id="__20">
+        <from-outcome id="__21">back</from-outcome>
+        <to-activity-id id="__19">searchVehicle</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__24">
+        <from-outcome id="__25">addOffence</from-outcome>
+        <to-activity-id id="__23">CreateInsert</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__26">
+      <from-activity-id id="__27">CreateInsert</from-activity-id>
+      <control-flow-case id="__30">
+        <from-outcome id="__29">CreateInsert</from-outcome>
+        <to-activity-id id="__28">offenceDetail</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__31">
+      <from-activity-id id="__32">offenceDetail</from-activity-id>
+      <control-flow-case id="__33">
+        <from-outcome id="__35">search</from-outcome>
+        <to-activity-id id="__34">searchVehicle</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

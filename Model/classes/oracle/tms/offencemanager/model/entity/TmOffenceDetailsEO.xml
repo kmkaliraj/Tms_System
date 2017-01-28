@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmOffenceDetailsEO"
+  Version="11.1.1.56.60"
+  DBObjectType="table"
+  DBObjectName="TM_OFFENCE_DETAILS"
+  AliasName="TmOffenceDetailsEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="VehNo"
+    Precision="20"
+    ColumnName="VEH_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_OFFENCE_DETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.VehNo_LABEL"/>
+        <TOOLTIP
+          ResId="VEHICLE_NUMBER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Image"
+    IsQueriable="false"
+    ColumnName="IMAGE"
+    SQLType="BLOB"
+    Type="oracle.jbo.domain.BlobDomain"
+    ColumnType="BLOB"
+    TableName="TM_OFFENCE_DETAILS"/>
+  <Attribute
+    Name="OffenceDetailId"
+    ColumnName="OFFENCE_DETAIL_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.DBSequence"
+    ColumnType="NUMBER"
+    TableName="TM_OFFENCE_DETAILS"
+    PrimaryKey="true"
+    IsUpdateable="while_insert"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="OffenceStatus"
+    Precision="20"
+    ColumnName="OFFENCE_STATUS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_OFFENCE_DETAILS"
+    DefaultValue="Seized">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.OffenceStatus_LABEL"/>
+        <TOOLTIP
+          ResId="OFFENCE_STATUS"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="OffenceId"
+    IsNotNull="true"
+    ColumnName="OFFENCE_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TM_OFFENCE_DETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Time"
+    ColumnName="TIME"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TM_OFFENCE_DETAILS"
+    IsNotNull="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Place"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="PLACE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_OFFENCE_DETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ReportedBy"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="REPORTED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TM_OFFENCE_DETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.ReportedBy_LABEL"/>
+        <TOOLTIP
+          ResId="REPORTED_BY"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute
+    Name="TmOffence"
+    Association="oracle.tms.offencemanager.model.assoc.TmOffenceTmoffenceDetAssoc"
+    AssociationEnd="oracle.tms.offencemanager.model.assoc.TmOffenceTmoffenceDetAssoc.TmOffence"
+    AssociationOtherEnd="oracle.tms.offencemanager.model.assoc.TmOffenceTmoffenceDetAssoc.TmOffenceDetails"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="SysC004512">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004512"/>
+      <Attr Name="_checkCondition" Value='"OFFENCE_DETAIL_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.OffenceDetailId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004513">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004513"/>
+      <Attr Name="_checkCondition" Value='"OFFENCE_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.OffenceId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004514">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004514"/>
+      <Attr Name="_checkCondition" Value='"TIME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.Time"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004515">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004515"/>
+      <Attr Name="_checkCondition" Value='"PLACE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.Place"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC004516">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C004516"/>
+      <Attr Name="_checkCondition" Value='"REPORTED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.ReportedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TmOffenceDetailsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TM_OFFENCE_DETAILS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO.OffenceDetailId"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.tms.offencemanager.model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>

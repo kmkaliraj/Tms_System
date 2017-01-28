@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM">
+      <AppModuleConfig name="TrafficManagerAMLocal" ApplicationName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM" DeployPlatform="LOCAL" JDBCName="TMS_DB" jbo.project="oracle.tms.offencemanager.model.Model">
+         <Security AppModuleJndiName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="TrafficManagerAMShared" ApplicationName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM" DeployPlatform="LOCAL" JDBCName="TMS_DB" jbo.project="oracle.tms.offencemanager.model.Model">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM">
+      <AppModuleConfig name="BrowseOffenceAMLocal" ApplicationName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM" DeployPlatform="LOCAL" JDBCName="TMS_DB" jbo.project="oracle.tms.offencemanager.model.Model">
+         <Security AppModuleJndiName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="BrowseOffenceAMShared" ApplicationName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM" DeployPlatform="LOCAL" JDBCName="TMS_DB" jbo.project="oracle.tms.offencemanager.model.Model">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

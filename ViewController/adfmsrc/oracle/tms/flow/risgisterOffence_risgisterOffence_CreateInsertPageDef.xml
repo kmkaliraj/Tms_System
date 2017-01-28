@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60"
+                id="risgisterOffence_risgisterOffence_CreateInsertPageDef"
+                Package="oracle.tms.flow" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="TmOffenceDetails2" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="TmOffenceDetails2Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="TmOffenceDetails2Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

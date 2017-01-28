@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="searchviewPageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmVehicledetails1" RangeSize="25"
+              DataControl="OffenceManagerAMDataControl"
+              id="TmVehicledetails1Iterator"/>
+    <searchRegion Criteria="TmVehicledetailsVOCriteria"
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="TmVehicledetails1Iterator"
+                  id="TmVehicledetailsVOCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TmVehicledetails1Iterator" id="TmVehicledetails1">
+      <nodeDefinition DefName="oracle.tms.offencemanager.model.uiview.TmVehicledetailsVO">
+        <AttrNames>
+          <Item Value="VehNo"/>
+          <Item Value="VehType"/>
+          <Item Value="EngineNo"/>
+          <Item Value="ModelN0"/>
+          <Item Value="VehName"/>
+          <Item Value="VehColor"/>
+          <Item Value="ManufacturerName"/>
+          <Item Value="DateOfManufacture"/>
+          <Item Value="NoOfCylinders"/>
+          <Item Value="CubicCapacity"/>
+          <Item Value="FuelUsed"/>
+          <Item Value="OwnerId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

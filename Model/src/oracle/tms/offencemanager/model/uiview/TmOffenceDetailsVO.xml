@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmOffenceDetailsVO"
+  Version="11.1.1.56.60"
+  SelectList="TmOffenceDetailsEO.VEH_NO, 
+       TmOffenceDetailsEO.IMAGE, 
+       TmOffenceDetailsEO.OFFENCE_DETAIL_ID, 
+       TmOffenceDetailsEO.OFFENCE_STATUS, 
+       TmOffenceDetailsEO.OFFENCE_ID, 
+       TmOffenceDetailsEO.TIME, 
+       TmOffenceDetailsEO.PLACE, 
+       TmOffenceDetailsEO.REPORTED_BY"
+  FromList="TM_OFFENCE_DETAILS TmOffenceDetailsEO"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  RowClass="oracle.tms.offencemanager.model.uiview.TmOffenceDetailsVORowImpl"
+  ComponentClass="oracle.tms.offencemanager.model.uiview.TmOffenceDetailsVOImpl"
+  DefClass="oracle.tms.offencemanager.model.uiview.TmOffenceDetailsVODefImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Def|Coll"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="TmOffenceVVO1"
+    ViewObjectName="oracle.tms.offencemanager.model.view.TmOffenceVVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_OffenceId"
+    ListVOName="TmOffenceVVO1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    NullValueId="LOV_OffenceId_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="OffenceId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="OffenceId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="OffenceType"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TmOffenceDetailsEO"
+    Entity="oracle.tms.offencemanager.model.entity.TmOffenceDetailsEO"/>
+  <ViewAttribute
+    Name="VehNo"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="VehNo"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="VEH_NO"/>
+  <ViewAttribute
+    Name="Image"
+    IsQueriable="false"
+    PrecisionRule="true"
+    EntityAttrName="Image"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="IMAGE"/>
+  <ViewAttribute
+    Name="OffenceDetailId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="OffenceDetailId"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="OFFENCE_DETAIL_ID"
+    IsUpdateable="while_insert"/>
+  <ViewAttribute
+    Name="OffenceStatus"
+    PrecisionRule="true"
+    EntityAttrName="OffenceStatus"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="OFFENCE_STATUS"/>
+  <ViewAttribute
+    Name="OffenceId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="OffenceId"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="OFFENCE_ID"
+    LOVName="LOV_OffenceId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Time"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Time"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="TIME"/>
+  <ViewAttribute
+    Name="Place"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Place"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="PLACE"/>
+  <ViewAttribute
+    Name="ReportedBy"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ReportedBy"
+    EntityUsage="TmOffenceDetailsEO"
+    AliasName="REPORTED_BY"/>
+</ViewObject>

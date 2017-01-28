@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.tms.offencemanager.model.appmodule.OffenceManagerAM">
+      <AppModuleConfig name="14E929D7FF6" jbo.project="oracle.tms.offencemanager.model.Model" JDBCName="TMS_DB" IsLazyLoadingTrue="true" ApplicationName="oracle.tms.offencemanager.model.appmodule.OffenceManagerAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="OffenceManagerAMLocal">
+         <Database jbo.TypeMapEntries="Oracle" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.tms.offencemanager.model.appmodule.OffenceManagerAM"/>
+         <Tester FullProxyInterfaceName="oracle.tms.offencemanager.model.appmodule.common.OffenceManagerAM"/>
+         <Custom LastUsedConfiguration="OffenceManagerAMLocal"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM">
+      <AppModuleConfig name="14ECE8C0123" jbo.project="oracle.tms.offencemanager.model.Model" JDBCName="TMS_DB" IsLazyLoadingTrue="true" ApplicationName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="TrafficManagerAMLocal">
+         <Database jbo.TypeMapEntries="Oracle" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.tms.offencemanager.model.appmodule.TrafficManagerAM"/>
+         <Tester FullProxyInterfaceName="oracle.tms.offencemanager.model.appmodule.common.TrafficManagerAM"/>
+         <Custom LastUsedConfiguration="TrafficManagerAMLocal"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM">
+      <AppModuleConfig name="14ED457A061" IsLazyLoadingTrue="true" BC4JConfigName="BrowseOffenceAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" JDBCName="TMS_DB" jbo.project="oracle.tms.offencemanager.model.Model" ApplicationName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM" DeployPlatform="LOCAL">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="Oracle"/>
+         <Security AppModuleJndiName="oracle.tms.offencemanager.model.appmodule.BrowseOffenceAM"/>
+         <Tester FullProxyInterfaceName="oracle.tms.offencemanager.model.appmodule.common.BrowseOffenceAM"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

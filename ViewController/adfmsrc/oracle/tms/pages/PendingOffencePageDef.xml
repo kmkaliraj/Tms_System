@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="PendingOffencePageDef"
+                Package="oracle.tms.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="searchPendingOffences_status"
+                IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="OffenceDetailJoined1" RangeSize="25"
+              DataControl="TrafficManagerAMDataControl"
+              id="OffenceDetailJoined1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="variables" id="status" DTSupportsMRU="true"
+          StaticList="true" NullValueFlag="start">
+      <AttrNames>
+        <Item Value="searchPendingOffences_status"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="All"/>
+        <Item Value="Cleared"/>
+        <Item Value="Seized"/>
+      </ValueList>
+    </list>
+    <methodAction id="searchPendingOffences" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="searchPendingOffences"
+                  IsViewObjectMethod="false"
+                  DataControl="TrafficManagerAMDataControl"
+                  InstanceName="TrafficManagerAMDataControl.dataProvider">
+      <NamedData NDName="status"
+                 NDValue="${bindings.searchPendingOffences_status}"
+                 NDType="java.lang.String"/>
+    </methodAction>
+    <tree IterBinding="OffenceDetailJoined1Iterator" id="OffenceDetailJoined1">
+      <nodeDefinition DefName="oracle.tms.offencemanager.model.uiview.OffenceDetailJoinedVO"
+                      Name="OffenceDetailJoined10">
+        <AttrNames>
+          <Item Value="OffenceDetailId"/>
+          <Item Value="VehNo"/>
+          <Item Value="VehType"/>
+          <Item Value="OffenceType"/>
+          <Item Value="OffenceStatus"/>
+          <Item Value="Place"/>
+          <Item Value="ReportedBy"/>
+          <Item Value="Time"/>
+          <Item Value="Penalty"/>
+          <Item Value="OffenceId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

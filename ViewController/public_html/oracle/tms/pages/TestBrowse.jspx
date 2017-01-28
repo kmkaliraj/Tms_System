@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:panelGroupLayout layout="horizontal" id="pgl2"
+                             inlineStyle="width:1558px; height:307px;">
+          <af:panelHeader text="TmOwnerdetails1" id="ph2">
+            <af:panelFormLayout id="pfl2">
+              <af:panelLabelAndMessage label="#{bindings.OwnerId.hints.label}"
+                                       id="plam18">
+                <af:outputText value="#{bindings.OwnerId.inputValue}" id="ot19">
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.OwnerId.format}"/>
+                </af:outputText>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.Fname.hints.label}"
+                                       id="plam16">
+                <af:outputText value="#{bindings.Fname.inputValue}" id="ot26"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.Lname.hints.label}"
+                                       id="plam23">
+                <af:outputText value="#{bindings.Lname.inputValue}" id="ot15"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.Dateofbirth.hints.label}"
+                                       id="plam9">
+                <af:outputText value="#{bindings.Dateofbirth.inputValue}"
+                               id="ot10">
+                  <af:convertDateTime pattern="#{bindings.Dateofbirth.format}"/>
+                </af:outputText>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.LandlineNo.hints.label}"
+                                       id="plam20">
+                <af:outputText value="#{bindings.LandlineNo.inputValue}"
+                               id="ot22"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.MobileNo.hints.label}"
+                                       id="plam13">
+                <af:outputText value="#{bindings.MobileNo.inputValue}"
+                               id="ot21"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.Gender.hints.label}"
+                                       id="plam17">
+                <af:outputText value="#{bindings.Gender.inputValue}" id="ot6"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.TempAddr.hints.label}"
+                                       id="plam1">
+                <af:outputText value="#{bindings.TempAddr.inputValue}"
+                               id="ot2"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.PermAddr.hints.label}"
+                                       id="plam15">
+                <af:outputText value="#{bindings.PermAddr.inputValue}"
+                               id="ot23"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.Pincode.hints.label}"
+                                       id="plam10">
+                <af:outputText value="#{bindings.Pincode.inputValue}" id="ot1">
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.Pincode.format}"/>
+                </af:outputText>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.Occupation.hints.label}"
+                                       id="plam11">
+                <af:outputText value="#{bindings.Occupation.inputValue}"
+                               id="ot12"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.PancardNo.hints.label}"
+                                       id="plam22">
+                <af:outputText value="#{bindings.PancardNo.inputValue}"
+                               id="ot16"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.AddProofName.hints.label}"
+                                       id="plam8">
+                <af:outputText value="#{bindings.AddProofName.inputValue}"
+                               id="ot14"/>
+              </af:panelLabelAndMessage>
+              <f:facet name="footer">
+                <af:panelGroupLayout layout="horizontal" id="pgl3">
+                  <af:commandButton actionListener="#{bindings.First.execute}"
+                                    text="First"
+                                    disabled="#{!bindings.First.enabled}"
+                                    partialSubmit="true" id="cb3"/>
+                  <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                    text="Previous"
+                                    disabled="#{!bindings.Previous.enabled}"
+                                    partialSubmit="true" id="cb4"/>
+                  <af:commandButton actionListener="#{bindings.Next.execute}"
+                                    text="Next"
+                                    disabled="#{!bindings.Next.enabled}"
+                                    partialSubmit="true" id="cb6"/>
+                  <af:commandButton actionListener="#{bindings.Last.execute}"
+                                    text="Last"
+                                    disabled="#{!bindings.Last.enabled}"
+                                    partialSubmit="true" id="cb2"/>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelFormLayout>
+          </af:panelHeader>
+          <af:panelHeader text="TmVehicledetails1" id="ph1">
+            <af:panelFormLayout id="pfl1">
+              <af:panelLabelAndMessage label="#{bindings.VehNo.hints.label}"
+                                       id="plam14">
+                <af:outputText value="#{bindings.VehNo.inputValue}" id="ot17"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.VehType.hints.label}"
+                                       id="plam2">
+                <af:outputText value="#{bindings.VehType.inputValue}"
+                               id="ot13"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.VehCategory.hints.label}"
+                                       id="plam26">
+                <af:outputText value="#{bindings.VehCategory.inputValue}"
+                               id="ot24"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.EngineNo.hints.label}"
+                                       id="plam4">
+                <af:outputText value="#{bindings.EngineNo.inputValue}"
+                               id="ot18"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.ModelN0.hints.label}"
+                                       id="plam12">
+                <af:outputText value="#{bindings.ModelN0.inputValue}" id="ot5"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.VehName.hints.label}"
+                                       id="plam5">
+                <af:outputText value="#{bindings.VehName.inputValue}" id="ot8"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.VehColor.hints.label}"
+                                       id="plam24">
+                <af:outputText value="#{bindings.VehColor.inputValue}"
+                               id="ot3"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.ManufacturerName.hints.label}"
+                                       id="plam25">
+                <af:outputText value="#{bindings.ManufacturerName.inputValue}"
+                               id="ot20"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.DateOfManufacture.hints.label}"
+                                       id="plam21">
+                <af:outputText value="#{bindings.DateOfManufacture.inputValue}"
+                               id="ot7">
+                  <af:convertDateTime pattern="#{bindings.DateOfManufacture.format}"/>
+                </af:outputText>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.NoOfCylinders.hints.label}"
+                                       id="plam6">
+                <af:outputText value="#{bindings.NoOfCylinders.inputValue}"
+                               id="ot25">
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.NoOfCylinders.format}"/>
+                </af:outputText>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.CubicCapacity.hints.label}"
+                                       id="plam19">
+                <af:outputText value="#{bindings.CubicCapacity.inputValue}"
+                               id="ot9">
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.CubicCapacity.format}"/>
+                </af:outputText>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.FuelUsed.hints.label}"
+                                       id="plam3">
+                <af:outputText value="#{bindings.FuelUsed.inputValue}"
+                               id="ot4"/>
+              </af:panelLabelAndMessage>
+              <af:panelLabelAndMessage label="#{bindings.OwnerId1.hints.label}"
+                                       id="plam7">
+                <af:outputText value="#{bindings.OwnerId1.inputValue}"
+                               id="ot11">
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.OwnerId1.format}"/>
+                </af:outputText>
+              </af:panelLabelAndMessage>
+              <f:facet name="footer">
+                <af:panelGroupLayout layout="horizontal" id="pgl1">
+                  <af:commandButton actionListener="#{bindings.First1.execute}"
+                                    text="First1"
+                                    disabled="#{!bindings.First1.enabled}"
+                                    partialSubmit="true" id="cb8"/>
+                  <af:commandButton actionListener="#{bindings.Previous1.execute}"
+                                    text="Previous1"
+                                    disabled="#{!bindings.Previous1.enabled}"
+                                    partialSubmit="true" id="cb1"/>
+                  <af:commandButton actionListener="#{bindings.Next1.execute}"
+                                    text="Next1"
+                                    disabled="#{!bindings.Next1.enabled}"
+                                    partialSubmit="true" id="cb5"/>
+                  <af:commandButton actionListener="#{bindings.Last1.execute}"
+                                    text="Last1"
+                                    disabled="#{!bindings.Last1.enabled}"
+                                    partialSubmit="true" id="cb7"/>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelFormLayout>
+          </af:panelHeader>
+        </af:panelGroupLayout>
+        <af:panelFormLayout id="pfl3">
+          <f:facet name="footer"/>
+          <af:panelAccordion id="pa1" inlineStyle="width:1536px; height:338px;">
+            <af:showDetailItem text="showDetailItem 1" id="sdi1">
+              <af:toolbox id="t1">
+                <af:commandButton actionListener="#{bindings.calculateTotal.execute}"
+                                  text="calculateTotal"
+                                  disabled="#{!bindings.calculateTotal.enabled}"
+                                  id="cb9"/>
+              </af:toolbox>
+              <af:table value="#{bindings.TmOffenceDetails1.collectionModel}"
+                        var="row" rows="#{bindings.TmOffenceDetails1.rangeSize}"
+                        emptyText="#{bindings.TmOffenceDetails1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.TmOffenceDetails1.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.TmOffenceDetails1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.TmOffenceDetails1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t2" width="1488">
+                <af:column sortProperty="VehNo" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.VehNo.label}"
+                           id="c1">
+                  <af:outputText value="#{row.VehNo}" id="ot34"/>
+                </af:column>
+                <af:column sortProperty="Image" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.Image.label}"
+                           id="c8">
+                  <af:outputText value="#{row.Image}" id="ot32"/>
+                </af:column>
+                <af:column sortProperty="OffenceDetailId" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.OffenceDetailId.label}"
+                           id="c4">
+                  <af:outputText value="#{row.OffenceDetailId}" id="ot28"/>
+                </af:column>
+                <af:column sortProperty="OffenceStatus" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.OffenceStatus.label}"
+                           id="c5">
+                  <af:outputText value="#{row.OffenceStatus}" id="ot30"/>
+                </af:column>
+                <af:column sortProperty="OffenceId" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.OffenceId.label}"
+                           id="c6">
+                  <af:outputText value="#{row.OffenceId}" id="ot31">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.TmOffenceDetails1.hints.OffenceId.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="Time" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.Time.label}"
+                           id="c7">
+                  <af:outputText value="#{row.Time}" id="ot29">
+                    <af:convertDateTime pattern="#{bindings.TmOffenceDetails1.hints.Time.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="Place" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.Place.label}"
+                           id="c3">
+                  <af:outputText value="#{row.Place}" id="ot27"/>
+                </af:column>
+                <af:column sortProperty="ReportedBy" sortable="false"
+                           headerText="#{bindings.TmOffenceDetails1.hints.ReportedBy.label}"
+                           id="c2">
+                  <af:outputText value="#{row.ReportedBy}" id="ot33"/>
+                </af:column>
+              </af:table>
+            </af:showDetailItem>
+          </af:panelAccordion>
+        </af:panelFormLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
